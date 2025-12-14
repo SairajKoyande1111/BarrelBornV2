@@ -5,7 +5,7 @@ import { useWelcomeAudio } from "../hooks/useWelcomeAudio";
 import { MediaPreloader } from "../components/media-preloader";
 import { useState, useEffect, useCallback } from "react";
 import logoImage from "@assets/Untitled_design_(20)_1765720426678.png";
-import bgPattern from "@assets/Untitled_design_(22)_1765724845997.png";
+import bgPattern from "@assets/dark_bg_pattern.png";
 
 export default function Welcome() {
   const [, setLocation] = useLocation();
@@ -55,18 +55,14 @@ export default function Welcome() {
   const containerHeight = Math.min(screenDimensions.height * 0.98, screenDimensions.height - 20);
 
   return (
-    <div className="h-screen w-screen overflow-hidden relative flex items-center justify-center" style={{ backgroundColor: '#151515' }}>
-      {/* Background pattern overlay */}
-      <div 
-        className="absolute inset-0 pointer-events-none"
-        style={{ 
-          backgroundImage: `url(${bgPattern})`, 
-          backgroundRepeat: 'repeat', 
-          backgroundSize: '250px 250px', 
-          backgroundPosition: 'center',
-          opacity: 0.08
-        }}
-      />
+    <div 
+      className="h-screen w-screen overflow-hidden relative flex items-center justify-center" 
+      style={{ 
+        backgroundImage: `url(${bgPattern})`, 
+        backgroundRepeat: 'repeat', 
+        backgroundSize: '512px 512px'
+      }}
+    >
       {/* Media preloader */}
       <MediaPreloader onComplete={() => setMediaReady(true)} />
 
