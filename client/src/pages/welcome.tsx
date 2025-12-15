@@ -39,12 +39,12 @@ export default function Welcome() {
           <img
             src={logoImage}
             alt="Barrelborn Dine & Draft"
-            className="w-[280px] h-auto"
+            className="w-[350px] h-auto"
           />
         </div>
 
-        {/* Social Media Icons - directly under logo, minimal gap */}
-        <div className="flex gap-3 mt-2">
+        {/* Social Media Icons - directly under logo, no gap */}
+        <div className="flex gap-3 mt-0">
           <button
             onClick={() => handleSocialClick("https://www.instagram.com/mingschinesecuisine.in?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==")}
             className="w-10 h-10 border rounded-md flex items-center justify-center transition-opacity hover:opacity-80"
