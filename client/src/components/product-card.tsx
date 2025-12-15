@@ -30,11 +30,12 @@ export default function ProductCard({ item }: ProductCardProps) {
 
       <div className="pt-3">
         <h3
-          className="text-base sm:text-lg font-semibold leading-tight mb-1"
+          className="text-lg sm:text-xl font-bold leading-snug mb-1 line-clamp-2"
           style={{ 
             color: '#C9A55C', 
             fontFamily: "'Cormorant Garamond', serif",
-            letterSpacing: "0.5px"
+            letterSpacing: "0.5px",
+            minHeight: "2.8em"
           }}
         >
           {item.name}
@@ -43,17 +44,19 @@ export default function ProductCard({ item }: ProductCardProps) {
           className="text-xs sm:text-sm leading-relaxed mb-2 line-clamp-2"
           style={{ 
             color: '#FFFFFF',
-            fontFamily: "'Lato', sans-serif"
+            fontFamily: "'Lato', sans-serif",
+            minHeight: "2.6em"
           }}
         >
-          {item.description}
+          {item.description || "No description available"}
         </p>
         <span
-          className="text-sm sm:text-base font-bold"
+          className="text-base sm:text-lg font-bold block"
           style={{ 
             color: '#FFFFFF',
             fontFamily: "'Lato', sans-serif",
-            letterSpacing: "0.5px"
+            letterSpacing: "0.5px",
+            lineHeight: "1.5"
           }}
         >
           ₹{item.price}

@@ -145,13 +145,17 @@ export default function SubcategoryProducts() {
 
       <div className="container mx-auto px-3 sm:px-4 py-4">
         <div className="relative mb-6">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-white" />
           <Input
             type="text"
             placeholder={`Search ${currentSubcategory.displayLabel.toLowerCase()}...`}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="pl-10 pr-12 h-11 rounded-full border-2 border-gray-600 bg-gray-800 text-white placeholder:text-gray-400 focus-visible:ring-2 focus-visible:ring-yellow-400/50"
+            className="pl-10 pr-12 h-11 rounded-full border-2 text-white placeholder:text-white/70 focus-visible:ring-2 focus-visible:ring-[#C9A55C]/50"
+            style={{ 
+              borderColor: '#C9A55C', 
+              backgroundColor: 'transparent'
+            }}
             data-testid="input-search"
           />
           {voiceSearchSupported && (
@@ -165,7 +169,7 @@ export default function SubcategoryProducts() {
               {isListening ? (
                 <MicOff className="h-4 w-4 text-red-500 animate-pulse" />
               ) : (
-                <Mic className="h-4 w-4 text-gray-400" />
+                <Mic className="h-4 w-4 text-white" />
               )}
             </Button>
           )}
