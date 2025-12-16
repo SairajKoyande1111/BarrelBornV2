@@ -14,7 +14,7 @@ import gourmetFood2 from "@assets/stock_images/gourmet_food_plating_6ae9981b.jpg
 
 import premiumFoodImg from "@assets/image_1765866040643.png";
 import premiumBarImg from "@assets/stock_images/premium_whisky_cockt_68b3295e.jpg";
-import premiumDessertsImg from "@assets/generated_images/chocolate_dessert_dark_background.png";
+import premiumDessertsImg from "@assets/image_1765866710467.png";
 import premiumMocktailsImg from "@assets/stock_images/premium_colorful_moc_1a15dee9.jpg";
 import logoImg from "@assets/Untitled_design_(20)_1765720426678.png";
 
@@ -263,7 +263,7 @@ export default function MenuLanding() {
                 alt={category.displayLabel}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 flex flex-col items-center justify-end p-4 pb-8">
+              <div className="absolute inset-0 flex flex-col items-center justify-start p-4 pt-8">
                 <h3
                   className="text-2xl sm:text-3xl md:text-4xl font-black tracking-wider uppercase"
                   style={{ 
@@ -275,16 +275,6 @@ export default function MenuLanding() {
                 >
                   {category.displayLabel}
                 </h3>
-                <p 
-                  className="text-xs sm:text-sm text-center mt-2 font-medium tracking-wide"
-                  style={{ 
-                    color: "#FFFFFF", 
-                    textShadow: "0 2px 8px rgba(0,0,0,0.8)",
-                    opacity: 0.95
-                  }}
-                >
-                  {category.description}
-                </p>
               </div>
             </motion.button>
           ))}
