@@ -7,10 +7,10 @@ import { Button } from "@/components/ui/button";
 import { mainCategories } from "@/lib/menu-categories";
 
 import restaurantInterior1 from "@assets/stock_images/elegant_restaurant_i_e8a94033.jpg";
-import restaurantInterior2 from "@assets/stock_images/elegant_restaurant_i_114f645e.jpg";
 import restaurantInterior3 from "@assets/stock_images/elegant_restaurant_i_46bc3b6c.jpg";
-import gourmetFood1 from "@assets/stock_images/gourmet_food_plating_4fa14995.jpg";
-import gourmetFood2 from "@assets/stock_images/gourmet_food_plating_6ae9981b.jpg";
+import newCarouselImg1 from "@assets/image_1765867084602.png";
+import newCarouselImg2 from "@assets/image_1765867378776.png";
+import newCarouselImg3 from "@assets/image_1765867524235.png";
 
 import premiumFoodImg from "@assets/image_1765866040643.png";
 import premiumBarImg from "@assets/stock_images/premium_whisky_cockt_68b3295e.jpg";
@@ -20,10 +20,10 @@ import logoImg from "@assets/Untitled_design_(20)_1765720426678.png";
 
 const promotionalImages = [
   { id: 1, src: restaurantInterior1, alt: "Elegant Restaurant Interior" },
-  { id: 2, src: gourmetFood1, alt: "Gourmet Food Plating" },
-  { id: 3, src: restaurantInterior2, alt: "Fine Dining Ambiance" },
-  { id: 4, src: gourmetFood2, alt: "Delicious Restaurant Dishes" },
-  { id: 5, src: restaurantInterior3, alt: "Restaurant Bar Area" },
+  { id: 2, src: newCarouselImg1, alt: "Restaurant Ambiance" },
+  { id: 3, src: restaurantInterior3, alt: "Fine Dining Area" },
+  { id: 4, src: newCarouselImg2, alt: "Gourmet Dishes" },
+  { id: 5, src: newCarouselImg3, alt: "Delicious Food Spread" },
 ];
 
 const categoryImages: Record<string, string> = {
@@ -220,17 +220,10 @@ export default function MenuLanding() {
                 alt={image.alt}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-              <div className="absolute bottom-4 left-4 text-white">
-                <h2 className="text-lg sm:text-xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  Welcome to Barrel Born
-                </h2>
-                <p className="text-sm opacity-90">Experience culinary excellence</p>
-              </div>
             </motion.div>
           ))}
 
-          <div className="absolute bottom-2 right-4 flex space-x-1.5">
+          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-1.5">
             {promotionalImages.map((_, index) => (
               <button
                 key={index}
